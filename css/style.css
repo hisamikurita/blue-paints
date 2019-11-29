@@ -1,0 +1,210 @@
+/* basic style */
+html,
+body
+{
+    position: relative;
+
+    overflow: hidden;
+}
+
+body
+{
+    display: flex;
+
+    height: 100vh;
+    margin: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+img
+{
+    width: 100%;
+    max-width: 100%;
+
+    vertical-align: bottom;
+}
+
+.bg
+{
+    width: 100%;
+    height: 100vh;
+
+    background: url(../images/bg.jpg) no-repeat center/cover;
+}
+
+/* canvas style */
+.canvas_01
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 1000px;
+    height: 667px;
+    margin: auto;
+
+    -webkit-mask: url(../images/mask2.png) no-repeat center/60%;
+            mask: url(../images/mask2.png) no-repeat center/60%;
+}
+
+.canvas_02
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 1000px;
+    height: 667px;
+    margin: auto;
+
+    -webkit-animation: imageFadeIn01 20s cubic-bezier(.23, 1, .32, 1) .3s forwards;
+            animation: imageFadeIn01 20s cubic-bezier(.23, 1, .32, 1) .3s forwards;
+
+    -webkit-mask: url(../images/mask.png) no-repeat center/0;
+            mask: url(../images/mask.png) no-repeat center/0;
+}
+
+@-webkit-keyframes imageFadeIn01
+{
+    0%
+    {
+        opacity: 0;
+
+        -webkit-mask-size: 0;
+                mask-size: 0;
+    }
+    100%
+    {
+        opacity: 1;
+
+        -webkit-mask-size: 140%;
+                mask-size: 140%;
+    }
+}
+
+@keyframes imageFadeIn01
+{
+    0%
+    {
+        opacity: 0;
+
+        -webkit-mask-size: 0;
+                mask-size: 0;
+    }
+    100%
+    {
+        opacity: 1;
+
+        -webkit-mask-size: 140%;
+                mask-size: 140%;
+    }
+}
+
+.canvas_03
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 540px;
+    height: 360px;
+    margin: auto;
+
+    -webkit-mask: url(../images/mask2.png) no-repeat center/70%;
+            mask: url(../images/mask2.png) no-repeat center/70%;
+}
+
+.canvas_04
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 540px;
+    height: 360px;
+    margin: auto;
+
+    -webkit-animation: imageFadeIn02 3s ease-in-out forwards;
+            animation: imageFadeIn02 3s ease-in-out forwards;
+
+    -webkit-mask: url(../images/mask.png) no-repeat center/0;
+            mask: url(../images/mask.png) no-repeat center/0;
+}
+
+@-webkit-keyframes imageFadeIn02
+{
+    0%
+    {
+        opacity: 0;
+
+        -webkit-mask-size: 0;
+                mask-size: 0;
+    }
+    100%
+    {
+        opacity: 1;
+
+        -webkit-mask-size: 100%;
+                mask-size: 100%;
+    }
+}
+
+@keyframes imageFadeIn02
+{
+    0%
+    {
+        opacity: 0;
+
+        -webkit-mask-size: 0;
+                mask-size: 0;
+    }
+    100%
+    {
+        opacity: 1;
+
+        -webkit-mask-size: 100%;
+                mask-size: 100%;
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+    html
+    {
+        font-size: 13.333333vw;
+    }
+    .canvas_01
+    {
+        left: -1.25rem;
+
+        width: 10.00rem;
+        height: 6.67rem;
+    }
+    .canvas_02
+    {
+        left: -1.25rem;
+
+        width: 10.00rem;
+        height: 6.67rem;
+    }
+    .canvas_03
+    {
+        width: 5.40rem;
+        height: 3.60rem;
+    }
+    .canvas_04
+    {
+        width: 5.40rem;
+        height: 3.60rem;
+    }
+}
